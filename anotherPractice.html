@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+  <title>anotherPractice</title>
+  <style>
+  body {
+    background-color: #005ea5;
+  }
+       h1 {
+          color: red;
+          /* color name */
+      }
+      h2 {
+          color: #ff0000;
+          /* hex code */
+      }
+      p {
+          color: rgb(255,0,0);
+          /* rgb value */
+      }
+      /* Outside the responsive part */
+      
+      
+  img.logo {
+    right: 0;
+    position: absolute;
+  }
+  img.icon {
+    display:none;
+  }
+  @media screen and (max-width: 600px) {
+  .menu th:not(:first-child) {display: none;}
+  .menu img.icon {
+    /*float: right;*/
+    display: block;
+  }
+      /* Contains hsl and hsla, hsl stands for HUE SATURATION LIGHTNESS the a stands for ALPHA which is transparency (see rgba below)*/
+      h1 {
+          color: darkcyan;
+          background-color: black;
+          background-color: hsl(0,0%,78%);
+          /* color name */
+      }
+      h2 {
+          color: #008b8b;
+          background-color: #000000;
+          background-color: hsla(0,100%,100%,0.5);
+          /* hex code */
+      }
+      p {
+          color: rgb(0,139,139);
+          background-color: rgb(0,0,0);
+          /* rgb value */
+          /* rgba value "rgba(0,0,0,0.5)" the 0.5 will add opacity to the colour, this number is from 0 to 1.0, 1.0 being 100% opacity */
+      }
+      /* Inside the resposive part */
+}
+     
+      
+</style>
+</head>
+<body>
+  <img class="logo" src="Images/hmrc.png" alt="HMRC Logo">
+  <table id="menuTable" class="menu">
+    <tr>
+      <th><img class="icon" src="https://thumbs.gfycat.com/EquatorialMedicalIberianmidwifetoad-max-1mb.gif" alt="burger"></th>
+      <th>Menu item 1</th>
+      <th>Menu item 2</th>
+      <th>Menu item 3</th>
+    </tr>
+  </table>
+    <h1>Gabor's web page task.</h1>
+    <h2>With a responsive website menu.</h2>
+    <p>Hungary is a landlocked country in Central Europe. Its capital, Budapest, is bisected by the Danube River. </p>
+</body>
+</html>
