@@ -5,3 +5,5 @@ body{
 h1 {
     color: rgb(255,255,255);
 }
+
+/* <!-- Use external if you ar buulding a site that has more than one page as you can have all your CSS code in one place --> */
