@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <title>Reactive</title>
+  <style>
+  body {
+    background-color: #005ea5;
+  }
+  img.logo {
+    right: 0;
+    position: absolute;
+  }
+  img.icon {
+    display:none;
+  }
+  @media screen and (max-width: 600px) {
+  .menu th:not(:first-child) {display: none;}
+  .menu img.icon {
+    /*float: right;*/
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+  <img class="logo" src=Images/hmrc.png alt="HMRC Logo">
+  <table id="menuTable" class="menu">
+    <tr>
+      <th><img class="icon" src="https://thumbs.gfycat.com/EquatorialMedicalIberianmidwifetoad-max-1mb.gif" alt="burger"></th>
+      <th>Menu item 1</th>
+      <th>Menu item 2</th>
+      <th>Menu item 3</th>
+    </tr>
+  </table>
+</body>
+</html>
