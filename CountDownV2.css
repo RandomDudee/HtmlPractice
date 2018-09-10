@@ -1,0 +1,61 @@
+ {
+            background-color: rgb(220, 239, 239);
+        }
+body {
+            font-family: arial;
+            background-color: rgb(220, 239, 239);           position:absolute;
+            top:50%;
+            left:50%;
+            margin-top:-50px; /* this is half the height of your div*/  
+            margin-left:-100px; /*this is half of width of your div*/
+            -webkit-box-shadow: 20px 20px 50px 0 #353536;
+            box-shadow: 20px 20px 50px 0 #353536;
+            border:2px solid black;
+            -moz-border-radius:8px;
+            -webkit-border-radius:8px;	
+            border-radius:8px;
+                }
+legend{
+            font-weight: bold;
+            float: left;
+            margin-bottom: .5em;
+            width: 100%;
+            text-align: center
+                }
+input[type=submit]{
+            width:250px;
+            height:45px;
+            border:none;
+            outline:none;
+            box-shadow:0 3px 2px 0 #2c80a2;
+            color:#fff;
+            font-size:14px;
+            text-shadow:0 1px rgba(0,0,0,0.4);
+            background-color:#3fb8e8;
+            font-weight:700;
+            background-repeat:no-repeat;
+            background-position:200px;
+            vertical-align: bottom;
+            text-align: center
+            }
+input[type=submit]:hover{
+            background-color:#1baae3;
+            cursor:pointer
+            }
+        input[type=submit]:active{
+            padding-top:2px;
+            box-shadow:none
+            }
+textarea{
+            font-family: arial;
+            background-color: rgb(185,179,175);
+            color: black;
+            font-weight: bold;
+            text-align: justify;
+            }
+form { 
+            text-align: right; vertical-align: top
+            }
+fieldset {
+    background-color: rgb(185,179,175);
+}

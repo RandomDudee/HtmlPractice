@@ -1,0 +1,154 @@
+<html>
+    
+    <head>
+    <title>Count Down Days</title>
+    <style type="text/css">
+        body {
+            background-color: rgb(220, 239, 239)
+        }
+        
+        fieldset, legend, div, div3, input[type=submit], textarea; {
+        margin: 0;
+        padding: 0;
+                    }
+        fieldset{
+            font-family: arial;
+            background-color: rgb(185,179,175);
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-top:-50px; /* this is half the height of your div*/  
+            margin-left:-100px; /*this is half of width of your div*/
+            -webkit-box-shadow: 20px 20px 50px 0 #353536;
+            box-shadow: 20px 20px 50px 0 #353536;
+            border:2px solid black;
+            -moz-border-radius:8px;
+            -webkit-border-radius:8px;	
+            border-radius:8px;
+                }
+        
+        legend{
+            font-weight: bold;
+            float: left;
+            margin-bottom: .5em;
+            width: 100%;
+            text-align: center
+                }
+        
+        div{ 
+            text-align: right; vertical-align: top
+            }
+        
+        
+        div3{
+            text-align: center; vertical-align: bottom
+            }
+        
+        input[type=submit]{
+            width:250px;
+            height:45px;
+            border:none;
+            outline:none;
+            box-shadow:0 3px 2px 0 #2c80a2;
+            color:#fff;
+            font-size:14px;
+            text-shadow:0 1px rgba(0,0,0,0.4);
+            background-color:#3fb8e8;
+            font-weight:700;
+            background-image:url(../images/1.png);
+            background-repeat:no-repeat;
+            background-position:200px;
+            vertical-align: bottom;
+            text-align: center
+            }
+        input[type=submit]:hover{
+            background-color:#1baae3;
+            cursor:pointer
+            }
+        input[type=submit]:active{
+            padding-top:2px;
+            box-shadow:none
+            }
+        textarea{
+             font-family: arial;
+            background-color: rgb(185,179,175);
+            position:absolute;
+            top:61%;
+            left:54%;
+            margin-top:-50px; /* this is half the height of your div*/  
+            margin-left:-100px; /*this is half of width of your div*/
+            -webkit-box-shadow: 20px 20px 50px 0 #353536;
+            box-shadow: 20px 20px 50px 0 #353536;
+            border:2px solid black;
+            -moz-border-radius:8px;
+            -webkit-border-radius:8px;	
+            border-radius:8px;
+            font-weight: bold;
+            text-align: center;
+            
+            }
+        
+        </style>
+
+    </head>
+    
+    <body>
+       <!-- <p>Test </p> -->
+ <p> 
+<fieldset>
+    <legend>Choose Trip Date</legend>
+
+    <div>
+        <label for="start">Today's Date</label>
+        <input type="date" id="start" name="start"
+               value="" required="required"/>
+    </div>
+
+    <div>
+        <label for="end">Trip Date</label>
+        <input type="date"  id="trip" name="trip" 
+               required="required"/>
+    </div>
+    
+    <div>
+         <input type="submit" class="submit" value="Submit" id="submit" required="required"/>
+    </div>
+    
+    
+  <script type="text/javascript">
+
+    var today = new Date();
+    document.getElementById('start').valueAsDate = today;
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    document.getElementById('submit').onclick =   function() {
+        console.log("this has been submitted");
+        var trip = new Date(document.getElementById('trip').value);
+        var now = new Date(document.getElementById('start').value);
+        console.log("now",now);
+        console.log("trip",trip);
+        
+       
+        var timeDiff = Math.abs(trip.getTime() - now.getTime());
+        var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+        console.log("timeDiff",timeDiff);
+        
+        document.getElementById('result-textarea').value = ' \n' + ' \n' + diffDays + ' Days until trip!'  ;
+        }   
+
+    //timer = setInterval(showRemaining, 1000);
+</script>
+<div id="countdown"></div>
+</fieldset>
+     
+     <textarea id="result-textarea" name="result" cols="30" rows="5" >
+
+</textarea>
+     
+</p>
+    </body>
+</html>

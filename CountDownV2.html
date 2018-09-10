@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title> Count Down Days v2 </title>
+        <link href="CountDownV2.css" type="text/css" rel="stylesheet"/>
+    </head>
+    
+    <body>
+        <script type="text/javascript">
+
+            window.onload = function(){ 
+   
+         
+            var today = new Date();
+            document.getElementById('start').valueAsDate = today;
+            var _second = 1000;
+            var _minute = _second * 60;
+            var _hour = _minute * 60;
+            var _day = _hour * 24;
+            var timer;
+                
+            
+    
+
+            document.getElementById('submit').onclick = function() {
+            console.log("this has been submitted");
+            var trip = new Date(document.getElementById('trip').value);
+            var now = new Date(document.getElementById('start').value);
+            console.log("now",now);
+            console.log("trip",trip);
+        
+       
+            var timeDiff = Math.abs(trip.getTime() - now.getTime());
+            var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+            console.log("timeDiff",timeDiff);
+            
+            document.getElementById('result-textarea').value = ' \n' + ' \n' + diffDays + ' Days until trip!';
+            break ; 
+            }};
+            
+        </script>
+            <!--<div id="countdown"></div>-->
+        
+    
+    
+    
+        <div id="countdown"></div>
+        <fieldset>
+            
+            <fieldset>
+                <legend>Choose Trip Date</legend>
+                <form>
+                <label for="start">Today's Date</label>
+                <input type="date" id="start" name="start"
+                  placeholder="01/01/2001" value=""/>
+                
+                <br />
+                
+                <label for="end">Trip Date</label>
+                <input type="date"  id="trip" name="trip" 
+                required="required"/>
+                
+                <br />
+                
+                <input type="submit" class="submit" value="Submit" id="submit" />
+                </form>
+            </fieldset>
+            
+            <br />
+            
+            <fieldset>
+                <textarea id="result-textarea" name="result" cols="38" rows="5" >
+                </textarea>
+            </fieldset>
+            
+        </fieldset>
+        
+    </body>
+    
+</html>
