@@ -1,0 +1,14 @@
+head {
+    
+}
+
+body{
+    background-color: aqua;
+}
+
+aside{
+    display: block; 
+    float: left;
+    border: 1px solid;
+    
+}
